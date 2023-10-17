@@ -14,26 +14,21 @@
 4. Запустить Docker Desktop.
 5. Запустить контейнеры docker:
 * Для работы с базой данных mysql выполнить команду:
-  docker-compose -f docker-compose-mysql.yml up -d
+  docker-compose up
   После прогона тестов остановить контейнеры:
-  docker-compose -f docker-compose-mysql.yml down
-* Для работы с базой данных postgres выполнить команду:
-  docker-compose -f docker-compose-postgres.yml up -d
-  После прогона тестов остановить контейнеры:
-  docker-compose -f docker-compose-postgres.yml down
+  docker-compose down
 6. Запустить SUT:
 * Для работы с базой данных mysql выполнить команду:
   java -jar artifacts/aqa-shop.jar
-  После прогона тестов остановить контейнеры:
 * Для работы с базой данных postgres выполнить команду:
-  java -jar artifacts/aqa-shop.jar --spring.profiles.active=post
-  После прогона тестов остановить контейнеры:
+  Java -jar artifacts/aqa-shop.jar --spring.profiles.active=post
 7. Проверить работоспособность SUT http://localhost:8080/
 8. Запустить тесты:
     * Для работы с базой данных mysql с помощью команды
-      ./gradlew clean test "-Ddb.url=jdbc:mysql://localhost:3306/app"
+      ./gradlew clean test или ./gradlew test 
     * Для работы с базой данных postgres с помощью команды
-      ./gradlew clean test "-Ddb.url=jdbc:postgresql://localhost:5432/app"
+      ./gradlew clean test -D db.url=jdbc:postgresql://localhost:5432/app 
+      или ./gradlew test -D db.url=jdbc:postgresql://localhost:5432/app
 9. После прогона тестов терминале IntelliJ IDEA остановить SUT
    CTRL+C
 

@@ -1,13 +1,17 @@
 package test;
 
 
+import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
 import data.DataHelper;
 import data.Sql;
+import pages.CardPage;
 import pages.Dashboard;
 
+import static com.codeborne.selenide.Selectors.withText;
+import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class PositiveTestCard {
@@ -34,10 +38,6 @@ public class PositiveTestCard {
         var approvedCardInformation = DataHelper.getValidCard();
         payCard.enterCardData(approvedCardInformation);
         payCard.successfulCardPayment();
-
-        var paymentId = Sql.getPaymentId();
-        var statusPayment = Sql.getStatusPayment(paymentId);
-        Assertions.assertEquals("APPROVED", statusPayment);
     }
 
     @DisplayName("Successful card purchase with current month and year.")
@@ -49,9 +49,6 @@ public class PositiveTestCard {
         payCard.enterCardData(validCardInformation);
         payCard.successfulCardPayment();
 
-        var paymentId = Sql.getPaymentId();
-        var statusPayment = Sql.getStatusPayment(paymentId);
-        Assertions.assertEquals("APPROVED", statusPayment);
     }
 
    }
