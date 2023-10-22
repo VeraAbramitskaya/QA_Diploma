@@ -35,7 +35,8 @@ dependencies {
     testImplementation 'org.postgresql:postgresql:42.6.0'
     testImplementation 'commons-dbutils:commons-dbutils:1.7'
     testImplementation 'io.rest-assured:rest-assured:5.3.1'
-    testImplementation 'io.qameta.allure:allure-rest-assured:2.23.0'
+    //testImplementation 'io.qameta.allure:allure-rest-assured:2.23.0'
+    testImplementation 'io.qameta.allure:allure-selenide:2.20.1'
     testImplementation 'com.google.code.gson:gson:2.3.1'
 }
 

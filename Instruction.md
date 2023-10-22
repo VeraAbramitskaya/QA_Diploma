@@ -29,6 +29,8 @@
     * Для работы с базой данных postgres с помощью команды
       ./gradlew clean test -D db.url=jdbc:postgresql://localhost:5432/app 
       или ./gradlew test -D db.url=jdbc:postgresql://localhost:5432/app
+    * Чтобы получить отчет Allure набрать команду
+      ./gradlew allureServe
 9. После прогона тестов терминале IntelliJ IDEA остановить SUT
    CTRL+C
 

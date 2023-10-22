@@ -38,6 +38,10 @@ public class PositiveTestCard {
         var approvedCardInformation = DataHelper.getValidCard();
         payCard.enterCardData(approvedCardInformation);
         payCard.successfulCardPayment();
+
+        var paymentId = Sql.getPaymentId();
+        var statusPayment = Sql.getStatusPayment(paymentId);
+        Assertions.assertEquals("APPROVED", statusPayment);
     }
 
     @DisplayName("Successful card purchase with current month and year.")
@@ -49,6 +53,9 @@ public class PositiveTestCard {
         payCard.enterCardData(validCardInformation);
         payCard.successfulCardPayment();
 
+        var paymentId = Sql.getPaymentId();
+        var statusPayment = Sql.getStatusPayment(paymentId);
+        Assertions.assertEquals("APPROVED", statusPayment);
     }
 
    }

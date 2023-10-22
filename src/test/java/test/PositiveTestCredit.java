@@ -34,6 +34,7 @@ public class PositiveTestCredit {
         var approvedCardInformation = DataHelper.getValidCard();
         buyCredit.enterCreditCardData(approvedCardInformation);
         buyCredit.successfulCreditCardPayment();
+
         var paymentId = Sql.getPaymentId();
         var statusPayment = Sql.getStatusCredit(paymentId);
         Assertions.assertEquals("APPROVED", statusPayment);
