@@ -10,8 +10,8 @@ public class Sql {
     @SneakyThrows
     public static Connection getConnection() {
         String dbUrl = System.getProperty("db.url");
-        String login = System.getProperty("login");
-        String password = System.getProperty("password");
+        String login = System.getProperty("app.userDB");
+        String password = System.getProperty("app.password");
         final Connection connection = DriverManager.getConnection(dbUrl, login, password);
         return connection;
     }
