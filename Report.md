@@ -11,7 +11,8 @@
 - Тесты для проверки записей в БД
 
 ## ***Количество тест-кейсов***
-Всего: [38 тестов] ![allure report_new.jpg](..%2F..%2FDownloads%2FVera%2F%F1%EA%F0%E8%ED%FB%2Fsql%2Fdiploma%2Fallure%20report_new.jpg)
+Всего: [38 тестов] ![allure report_new](https://github.com/VeraAbramitskaya/QA_Diploma/assets/124785172/35db1edf-93cc-496e-8ce1-1c687e69d703)
+
 Успешных:  32 (84,21%) 
 Неуспешных: 6 (15,78%)
 
